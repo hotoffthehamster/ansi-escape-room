@@ -115,6 +115,8 @@ How to use the module in your own python code:
 
 or you car use description:
 
+.. code-block:: bash
+
     >>> green = colored.fg('green')
     >>> default = colored.fg('default')
     >>> print ('%s Hellow World !!! %s') % (green, default)
