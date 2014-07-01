@@ -98,11 +98,11 @@ Installation
 
 .. code-block:: bash
 
-    $ pip install pysed
+    $ pip install colored
 
     uninstall
 
-    $ pip uninstall pysed
+    $ pip uninstall colored
 
 
 Usage Examples
