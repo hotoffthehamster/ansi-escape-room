@@ -135,3 +135,6 @@ using format method:
     >>> bold = colored.set('bold')
     >>> print ('{0}{1} Hello World !!! {3}'.format(green, bold, default))
      Hello World !!!
+
+.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshot/screenshot-2.png
+    :alt: example
