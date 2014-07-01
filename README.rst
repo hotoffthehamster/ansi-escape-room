@@ -8,7 +8,7 @@ Very simple Python library for color and formatting in terminal.
     :alt: example
 
 The following colors works with most terminals and terminals emulators.
-
+ANSI/VT100 escape sequences can be used in every programming languages.
 
 Set:
 
@@ -116,8 +116,8 @@ How to use the module in your own python code:
     >>> 
     >>> red = colored.fg(31)
     >>> default = colored.fg(39)
-    >>> print ('%s Hellow World !!! %s') % (red, default)
-     Hellow World !!!
+    >>> print ('%s Hello World !!! %s') % (red, default)
+     Hello World !!!
 
 or you car use description:
 
@@ -125,13 +125,13 @@ or you car use description:
 
     >>> green = colored.fg('green')
     >>> default = colored.fg('default')
-    >>> print ('%s Hellow World !!! %s') % (green, default)
-     Hellow World !!!
+    >>> print ('%s Hello World !!! %s') % (green, default)
+     Hello World !!!
 
 using format method:
 
 .. code-block:: bash
 
     >>> bold = colored.set('bold')
-    >>> print ('{0}{1} Hellow World !!! {2}'.format(green, bold, default))
-     Hellow World !!!
+    >>> print ('{0}{1} Hello World !!! {3}'.format(green, bold, default))
+     Hello World !!!
