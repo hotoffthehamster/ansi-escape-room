@@ -1,3 +1,7 @@
+colored
+=======
+
+
 Very simple Python library for color and formatting in terminal.
 
 The following colors works with most terminals and terminals emulators.
