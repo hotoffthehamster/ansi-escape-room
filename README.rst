@@ -91,6 +91,11 @@ Background:
     +-----+---------------+
 
 
+
+
+
+
+
 Installation
 ------------
 
@@ -126,3 +131,8 @@ or you car use description:
     >>> print ('%s Hellow World !!! %s') % (green, default)
      Hellow World !!!
 
+using format method:
+
+    >>> bold = colored.set('bold')
+    >>> print ('{0}{1} Hellow World !!! {2}'.format(green, bold, default))
+     Hellow World !!!
