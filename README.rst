@@ -90,10 +90,8 @@ Background:
     | 107 | white         |
     +-----+---------------+
 
-
-
-
-
+.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshot/screenshot-1.png
+    :alt: example
 
 
 Installation
