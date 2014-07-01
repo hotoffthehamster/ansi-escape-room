@@ -131,6 +131,8 @@ or you car use description:
 
 using format method:
 
+.. code-block:: bash
+
     >>> bold = colored.set('bold')
     >>> print ('{0}{1} Hellow World !!! {2}'.format(green, bold, default))
      Hellow World !!!
