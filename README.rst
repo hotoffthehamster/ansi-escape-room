@@ -4,6 +4,9 @@ colored
 
 Very simple Python library for color and formatting in terminal.
 
+.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshot/screenshot-1.png
+    :alt: example
+
 The following colors works with most terminals and terminals emulators.
 
 
@@ -89,10 +92,6 @@ Background:
     | 106 | light_cyan    |
     | 107 | white         |
     +-----+---------------+
-
-.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshot/screenshot-1.png
-    :alt: example
-
 
 Installation
 ------------
