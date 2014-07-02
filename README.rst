@@ -131,7 +131,7 @@ Usage Examples
 
 How to use the module in your own python code:
 
-Modules : colored.fg(), colored.fg256(), colored.bg(), colored.bg(256), colored.set(), 
+Modules : colored.fg(), colored.fg256(), colored.bg(), colored.bg256(), colored.set(), 
 colored.reset()
 
 
@@ -161,9 +161,18 @@ using format method:
     >>> print ('{0}{1} Hello World !!! {2}'.format(green, bold, default))
      Hello World !!!
 
+print 256 colors:
+
+    >>> color = colored.fg256(165)
+    >>> color
+    '\x1b[38;5;165m'
+    >>> print color + 'Hello World !!!' + colored.reset(0)
+    Hello World !!!
+    >>> bg_color = colored.bg256(115)
+    >>> print color + bg_color + 'Hello World !!!' + colored.reset(0)
+    Hello World !!!
 
 Screenshot:
 
 .. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/screenshot-2.png
     :alt: example
-
