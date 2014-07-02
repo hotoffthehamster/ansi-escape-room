@@ -110,6 +110,9 @@ Usage Examples
 
 How to use the module in your own python code:
 
+Modules : colored.fg(), colored.bg(), colored.set(), colored.reset()
+
+
 .. code-block:: bash
 
     >>> import colored
@@ -135,6 +138,9 @@ using format method:
     >>> bold = colored.set('bold')
     >>> print ('{0}{1} Hello World !!! {3}'.format(green, bold, default))
      Hello World !!!
+
+
+Screenshot:
 
 .. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshot/screenshot-2.png
     :alt: example
