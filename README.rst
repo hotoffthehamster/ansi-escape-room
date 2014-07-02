@@ -163,6 +163,8 @@ using format method:
 
 print 256 colors:
 
+.. code-block:: bash
+
     >>> color = colored.fg256(165)
     >>> color
     '\x1b[38;5;165m'
