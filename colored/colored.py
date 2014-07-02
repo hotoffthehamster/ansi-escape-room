@@ -6,6 +6,8 @@
 
 
 ESC = '\x1b['
+FG256 = ESC + '38;5;'
+BG256 = ESC + '48;5;'
 END = 'm'
 
 def set(color):
@@ -92,6 +94,11 @@ def fg(color):
     return paint[color]
 
 
+def fg256(color):
+
+    return  FG256 + str(color) + END
+
+
 def bg(color):
     
     paint = {
@@ -135,3 +142,7 @@ def bg(color):
 
     return paint[color]
 
+
+def bg256(color):
+
+    return  BG256 + str(color) + END
