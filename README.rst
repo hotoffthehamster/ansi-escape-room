@@ -102,6 +102,20 @@ Background:
     | 107 | white         |
     +-----+---------------+
 
+
+256 Colors Foreground (text):
+
+.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/256_colors_fg.png
+
+    :alt: 256 fg colors
+
+256 Colors Background:
+
+.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/256_colors_bg.png
+
+    :alt: 256 bg colors
+
+
 Installation
 ------------
 
@@ -119,7 +133,8 @@ Usage Examples
 
 How to use the module in your own python code:
 
-Modules : colored.fg(), colored.bg(), colored.set(), colored.reset()
+Modules : colored.fg(), colored.fg256(), colored.bg(), colored.bg(256), colored.set(), 
+colored.reset()
 
 
 .. code-block:: bash
