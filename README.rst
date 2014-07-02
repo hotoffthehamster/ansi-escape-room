@@ -145,7 +145,7 @@ using format method:
 .. code-block:: bash
 
     >>> bold = colored.set('bold')
-    >>> print ('{0}{1} Hello World !!! {3}'.format(green, bold, default))
+    >>> print ('{0}{1} Hello World !!! {2}'.format(green, bold, default))
      Hello World !!!
 
 

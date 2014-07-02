@@ -1,6 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+'''Very simple Python library for color and 
+    formatting in terminal.'''
+
 
 ESC = '\x1b['
 END = 'm'
