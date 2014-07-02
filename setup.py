@@ -29,6 +29,6 @@ setup(
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.0"]
+        "Programming Language :: Python :: 3.0"],
     long_description=open("README.rst").read()
 )
