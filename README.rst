@@ -1,4 +1,4 @@
-. image:: https://badge.fury.io/py/colored.png
+.. image:: https://badge.fury.io/py/colored.png
     :target: http://badge.fury.io/py/colored
 .. image:: https://pypip.in/d/colored/badge.png
     :target: https://pypi.python.org/pypi/colored
