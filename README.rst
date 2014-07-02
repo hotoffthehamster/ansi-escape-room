@@ -106,13 +106,11 @@ Background:
 256 Colors Foreground (text):
 
 .. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/256_colors_fg.png
-
     :alt: 256 fg colors
 
 256 Colors Background:
 
 .. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/256_colors_bg.png
-
     :alt: 256 bg colors
 
 
