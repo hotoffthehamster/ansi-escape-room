@@ -13,7 +13,7 @@ colored
 
 Very simple Python library for color and formatting in terminal.
 
-.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/screenshot-1.png
+.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/screenshot-1.png
     :alt: example
 
 The following colors works with most terminals and terminals emulators.
@@ -105,12 +105,12 @@ Background:
 
 256 Colors Foreground (text):
 
-.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/256_colors_fg.png
+.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/256_colors_fg.png
     :alt: 256 fg colors
 
 256 Colors Background:
 
-.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/256_colors_bg.png
+.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/256_colors_bg.png
     :alt: 256 bg colors
 
 
@@ -176,5 +176,5 @@ print 256 colors:
 
 Screenshot:
 
-.. image:: https://raw.githubusercontent.com/dslackw/colored/master/screenshots/screenshot-2.png
+.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/screenshot-2.png
     :alt: example

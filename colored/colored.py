@@ -136,8 +136,6 @@ def bg(color):
          106            : ESC + '106' + END,
         'white'         : ESC + '107' + END,
          107            : ESC + '107' + END
-
-
     }
 
     return paint[color]
