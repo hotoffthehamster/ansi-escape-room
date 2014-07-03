@@ -150,6 +150,9 @@ Functions
 
 .. code-block:: bash
 
+Initialisation
+--------------
+
     >>> import colored
     >>> 
     >>> red = colored.fg(31)
