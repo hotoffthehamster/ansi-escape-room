@@ -157,7 +157,7 @@ Functions
     >>> print ('%s Hello World !!! %s') % (red, default)
      Hello World !!!
 
-or you car use description:
+Use description:
 
 .. code-block:: bash
 
@@ -166,7 +166,7 @@ or you car use description:
     >>> print ('%s Hello World !!! %s') % (green, default)
      Hello World !!!
 
-using format method:
+Using format method:
 
 .. code-block:: bash
 
@@ -174,7 +174,7 @@ using format method:
     >>> print ('{0}{1} Hello World !!! {2}'.format(green, bold, default))
      Hello World !!!
 
-print 256 colors:
+Print 256 colors:
 
 .. code-block:: bash
 
