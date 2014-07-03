@@ -139,11 +139,11 @@ How to use the module in your own python code:
 Functions
 ---------
 
-colored.fg() Change foreground color
-colored.fg256() Change foreground color using 256 colors
-colored.bg() Change background color
-colored.bg256() Change background color using 256 colors 
-colored.set() Set attribute combinations
+colored.fg() Change foreground color,
+colored.fg256() Change foreground color using 256 colors,
+colored.bg() Change background color,
+colored.bg256() Change background color using 256 colors, 
+colored.set() Set attribute combinations,
 colored.reset() Reset attributes
 
 .. code-block:: bash
