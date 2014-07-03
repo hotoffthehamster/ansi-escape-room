@@ -148,10 +148,10 @@ Functions
     colored.set() Set attribute combinations,
     colored.reset() Reset attributes
 
-.. code-block:: bash
-
 Initialisation
 --------------
+
+.. code-block:: bash
 
     >>> import colored
     >>> 
