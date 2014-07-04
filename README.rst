@@ -13,8 +13,11 @@ colored
 
 Very simple Python library for color and formatting in terminal.
 
-.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/screenshot-1.png
-    :alt: example
+Video Demo
+----------
+
+.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/video.png
+    :target: https://asciinema.org/a/10623
 
 The following colors works with most terminals and terminals emulators.
 ANSI/VT100 escape sequences can be used in every programming languages.
