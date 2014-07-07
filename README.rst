@@ -36,12 +36,12 @@ Attributes:
     |  7  | reverse          |
     |  8  | hidden           |
     |  0  | reset            |
-    |  21 | reset bold       |
-    |  22 | reset dim        |
-    |  24 | reset underlined |
-    |  25 | reset blink      |
-    |  27 | reset reverse    |
-    |  28 | reset hidden     |
+    |  21 | res_bold         |
+    |  22 | res_dim          |
+    |  24 | res_underlined   |
+    |  25 | res_blink        |
+    |  27 | res_reverse      |
+    |  28 | res_hidden       |
     +------------------------+  
 
 
