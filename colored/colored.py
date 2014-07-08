@@ -531,7 +531,7 @@ class colored:
 
 
 
-    def attr(self):
+    def attribute(self):
         '''Set or reset attributes'''
 
         paint = {
@@ -567,7 +567,7 @@ class colored:
 
 
 
-    def fg(self):
+    def foreground(self):
         '''Print 256 foreground colors'''
 
         if self.color == 256 or self.color == 'default':
@@ -579,7 +579,7 @@ class colored:
 
 
 
-    def bg(self):
+    def background(self):
         '''Print 256 background colors'''
 
         if self.color == 256 or self.color == 'default':
@@ -589,3 +589,22 @@ class colored:
     
         return code + self.paint[self.color]
  
+
+
+def attr(color):
+    '''alias for colored().attribute()'''
+
+    return colored(color).attribute()
+
+
+def fg(color):
+    '''alias for colored().foreground()'''
+
+    return colored(color).foreground()
+
+
+def bg(color):
+    '''alias for colored().background()'''
+
+    return colored(color).background()
+

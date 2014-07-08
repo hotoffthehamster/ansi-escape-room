@@ -3,16 +3,16 @@
 
 '''test foreground and background colors'''
 
-from colored import colored
+from colored import fg, bg
 import time
 
 def main():
 
     for color in range(0, 257):
         print ('%s This text is colored %s') % (
-            colored(color).fg(), colored('default').fg())
+            fg(color), fg('default'))
         print ('%s This background is colored %s') % (
-            colored(color).bg(), colored('default').bg())
+            bg(color), bg('default'))
         time.sleep(0.1)
 
 

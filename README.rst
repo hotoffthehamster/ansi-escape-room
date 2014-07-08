@@ -360,31 +360,22 @@ Initialisation
 
 .. code-block:: bash
 
-    >>> from colored import colored
+    >>> from colored import fg, bg, attr
     >>>
-    >>> red = colored(1).fg()
-    >>> default = colored(256).fg()
-    >>> print ('%s Hello World !!! %s') % (red, default)
+    >>> print ('%s Hello World !!! %s') % (fg(1), fg(256))
      Hello World !!! 
     >>> 
-    >>> bg_white = colored(15).bg()
-    >>> bg_default = colored(256).bg()
-    >>> print ('%s%s Hello World !!! %s%s') % (red, bg_white, default, bg_default)
+    >>> print ('%s%s Hello World !!! %s') % (fg(1), bg(15), attr(0))
      Hello World !!! 
 
 Use description:
 
 .. code-block:: bash
 
-    >>> green = colored('green').fg()
-    >>> bg_yellow = colored('yellow_2').bg()
-    >>> reset_all = colored('reset').attr()
-    >>>
-    >>> print ('%s%s Hello World !!! %s') % (green, bg_yellow, reset_all)
+    >>> print ('%s%s Hello World !!! %s') % (fg('white'), bg('yellow'), attr('reset'))
      Hello World !!! 
     >>> 
-    >>> bold = colored('bold').attr()
-    >>> print ('%s%s Hello World !!! %s') % (green, bold, reset_all)
+    >>> print ('%s%s Hello World !!! %s') % (fg('orchid'), attr('bold'), attr('reset'))
      Hello World !!! 
     >>>
 

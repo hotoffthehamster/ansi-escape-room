@@ -1,4 +1,9 @@
 08-07-2014
+Version 1.0.8
+
+[Updated] - create alias fg(), bg(), attr()
+
+08-07-2014
 Version 1.0.7
 
 [Updated] - Include two dictionary in one
