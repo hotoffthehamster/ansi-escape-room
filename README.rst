@@ -350,7 +350,7 @@ How to use the module in your own python code:
 
     >>> from colored import fg, bg, attr
     >>>
-    >>> print ('%s Hello World !!! %s') % (fg(1), fg(256))
+    >>> print ('%s Hello World !!! %s') % (fg(1), attr(0))
      Hello World !!! 
     >>> 
     >>> print ('%s%s Hello World !!! %s') % (fg(1), bg(15), attr(0))
@@ -366,6 +366,10 @@ Use description:
     >>> print ('%s%s Hello World !!! %s') % (fg('orchid'), attr('bold'), attr('reset'))
      Hello World !!! 
     >>>
+    >>> color = bg('indian_red_1a') + fg('white') + attr('bold')
+    >>> reset = attr('reset')
+    >>> print (color + 'Hello World !!!' + reset)
+    Hello World !!!
 
 Screenshot:
 

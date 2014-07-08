@@ -1,3 +1,9 @@
+09-07-2014
+Version 1.0.9
+
+[Updated] - Remove numbers from dictionary
+            Fix KeyError
+
 08-07-2014
 Version 1.0.8
 
