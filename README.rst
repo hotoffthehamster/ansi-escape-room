@@ -10,8 +10,10 @@
 colored
 =======
 
-
 Very simple Python library for color and formatting in terminal.
+Collection of color codes and names for 256 color terminal setups.
+The following is a list of 256 colors for Xterm, containing an example
+of the displayed color, Xterm Name, Xterm Number.
 
 Video Demo
 ----------
@@ -45,7 +47,7 @@ Attributes:
     +------------------------+  
 
 
-256 Foreground and Background Colors:
+256 Foreground and Background Colors - Full Chart:
 
 .. code-block:: bash
 
@@ -349,9 +351,9 @@ Functions
 
 .. code-block:: bash
 
-    colored.fg() Change foreground color,
-    colored.bg() Change background color,
-    colored.attr() Set and Reset attributes
+    colored().fg() Change foreground color,
+    colored().bg() Change background color,
+    colored().attr() Set and Reset attributes
 
 Initialisation
 --------------
