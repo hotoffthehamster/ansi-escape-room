@@ -346,18 +346,6 @@ Usage Examples
 
 How to use the module in your own python code:
 
-Functions
----------
-
-.. code-block:: bash
-
-    colored().fg() Change foreground color,
-    colored().bg() Change background color,
-    colored().attr() Set and Reset attributes
-
-Initialisation
---------------
-
 .. code-block:: bash
 
     >>> from colored import fg, bg, attr
