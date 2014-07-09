@@ -352,6 +352,7 @@ def fg(color):
 
 def bg(color):
     '''alias for colored().background()'''
+
     try:
         return colored(color).background()
     except KeyError:

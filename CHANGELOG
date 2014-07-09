@@ -1,4 +1,10 @@
 09-07-2014
+Version 1.1.0
+
+[Feature] - Added new test_2.py and colors_list.txt
+[Updated] - Fix Python 3 support
+
+09-07-2014
 Version 1.0.9
 
 [Updated] - Remove numbers from dictionary
