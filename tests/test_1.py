@@ -6,13 +6,14 @@
 from colored import fg, bg, attr
 import time
 
+
 def main():
 
     for color in range(0, 256):
-        print ('%s This text is colored %s') % (
-            fg(color), attr('reset'))
-        print ('%s This background is colored %s') % (
-            bg(color), attr('reset'))
+        print ('%s This text is colored %s' %
+               (fg(color), attr('reset')))
+        print ('%s This background is colored %s' %
+               (bg(color), attr('reset')))
         time.sleep(0.1)
 
 

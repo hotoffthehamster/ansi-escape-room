@@ -352,25 +352,35 @@ How to use the module in your own python code:
 
     >>> from colored import fg, bg, attr
     >>>
-    >>> print ('%s Hello World !!! %s') % (fg(1), attr(0))
+    >>> print ('%s Hello World !!! %s' % (fg(1), attr(0)))
      Hello World !!! 
     >>> 
-    >>> print ('%s%s Hello World !!! %s') % (fg(1), bg(15), attr(0))
+    >>> print ('%s%s Hello World !!! %s' % (fg(1), bg(15), attr(0)))
      Hello World !!! 
 
 Use description:
 
 .. code-block:: bash
 
-    >>> print ('%s%s Hello World !!! %s') % (fg('white'), bg('yellow'), attr('reset'))
+    >>> print ('%s%s Hello World !!! %s' % (fg('white'), bg('yellow'), attr('reset')))
      Hello World !!! 
     >>> 
-    >>> print ('%s%s Hello World !!! %s') % (fg('orchid'), attr('bold'), attr('reset'))
+    >>> print ('%s%s Hello World !!! %s' % (fg('orchid'), attr('bold'), attr('reset')))
      Hello World !!! 
     >>>
-    >>> color = bg('indian_red_1a') + fg('white') + attr('bold')
+    >>> color = bg('indian_red_1a') + fg('white')
     >>> reset = attr('reset')
     >>> print (color + 'Hello World !!!' + reset)
+    Hello World !!!
+
+Or use HEX code:
+
+.. code-block:: bash
+
+    >>> color = fg('#c0c0c0') + bg('#00005f')
+    >>> res = attr('reset')
+    >>>
+    >>> print (color + "Hello World !!!" + res)
     Hello World !!!
 
 Screenshot:

@@ -1,17 +1,27 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''Very simple Python library for color and 
-    formatting in terminal.'''
+'''Very simple Python library for color and formatting in terminal.
+    Collection of color codes and names for 256 color terminal setups.
+    The following is a list of 256 colors for Xterm, containing an example
+    of the displayed color, Xterm Name, Xterm Number.'''
 
+
+from .hex import HEX
 
 
 class colored:
 
     def __init__(self, color):
+        
         self.ESC = '\x1b['
         self.END = 'm'
         self.color = color
+        
+        if str(color).startswith('#'):
+            self.HEX = HEX(color)
+        else:
+            self.HEX = ''
 
         self.paint = {
             'black'                  : '0',
@@ -273,7 +283,6 @@ class colored:
         }       
 
 
-
     def attribute(self):
         '''Set or reset attributes'''
 
@@ -316,6 +325,8 @@ class colored:
 
         if str(self.color).isdigit() == True:
             return self.ESC + '38;5;' + str(self.color) + self.END
+        elif self.color.startswith('#'):
+            return self.ESC + '38;5;' + str(self.HEX) + self.END
         else:
             return code + self.paint[self.color] + self.END
 
@@ -327,6 +338,8 @@ class colored:
     
         if str(self.color).isdigit() == True:
             return self.ESC + '48;5;' + str(self.color) + self.END
+        elif self.color.startswith('#'):
+            return self.ESC + '48;5;' + str(self.HEX) + self.END
         else:
             return code + self.paint[self.color] + self.END
  
