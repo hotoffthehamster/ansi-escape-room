@@ -13,7 +13,7 @@ colored
 Very simple Python library for color and formatting in terminal.
 Collection of color codes and names for 256 color terminal setups.
 The following is a list of 256 colors for Xterm, containing an example
-of the displayed color, Xterm Name, Xterm Number.
+of the displayed color, Xterm Name, Xterm Number and HEX.
 
 `[CHANGELOG] <https://github.com/dslackw/colored/blob/master/CHANGELOG>`_
 
