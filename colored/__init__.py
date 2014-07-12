@@ -4,6 +4,10 @@
 from __future__ import print_function
 
 from .colored import *
+from .fore import fore
+from .back import back
+from .style import style
 
-__version__ = "1.1.1"
+__version_info__ = (1, 1, 1)
+__version__ = '{0}.{1}.{2}'.format(*__version_info__)
 

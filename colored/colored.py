@@ -10,7 +10,7 @@
 from .hex import HEX
 
 
-class colored:
+class colored(object):
 
     def __init__(self, color):
         
@@ -371,3 +371,4 @@ def bg(color):
     except KeyError:
         print ("colored: error: not found background: '%s' color" % color)
         return ''
+

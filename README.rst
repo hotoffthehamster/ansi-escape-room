@@ -379,9 +379,17 @@ Or use HEX code:
 
     >>> color = fg('#c0c0c0') + bg('#00005f')
     >>> res = attr('reset')
-    >>>
     >>> print (color + "Hello World !!!" + res)
     Hello World !!!
+
+Use directly like `colorama <https://pypi.python.org/pypi/colorama>`_ but with more colors:
+
+.. code-block:: bash
+
+    >>> from colored import fore, back, style
+    >>>
+    >>> print (fore.LIGHT_BLUE + back.RED + style.BOLD + "Hello World !!!" + style.RESET)
+
 
 Screenshot:
 
