@@ -1,4 +1,9 @@
 11-07-2014
+Version 1.1.3
+
+[Updated] - Fix version, remove attr.py conflict with colored.py
+
+11-07-2014
 Version 1.1.2
 
 [Feature] - Added class fore, back, style
