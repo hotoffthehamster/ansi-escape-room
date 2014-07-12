@@ -1,6 +1,4 @@
-    
 names = (
-    
     'black',
     'red',
     'green',
@@ -257,4 +255,4 @@ names = (
     'grey_85',
     'grey_89',
     'grey_93'
-)
+    )
