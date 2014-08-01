@@ -1,10 +1,18 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''Very simple Python library for color and formatting in terminal.
+'''
+               _                    _ 
+      ___ ___ | | ___  _ __ ___  __| |
+     / __/ _ \| |/ _ \| '__/ _ \/ _` |
+    | (_| (_) | | (_) | | |  __/ (_| |
+     \___\___/|_|\___/|_|  \___|\__,_|
+
+    Very simple Python library for color and formatting in terminal.
     Collection of color codes and names for 256 color terminal setups.
     The following is a list of 256 colors for Xterm, containing an example
-    of the displayed color, Xterm Name, Xterm Number.'''
+    of the displayed color, Xterm Name, Xterm Number.
+'''
 
 
 from .hex import HEX

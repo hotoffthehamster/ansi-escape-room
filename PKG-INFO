@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: colored
-Version: 1.1.3
+Version: 1.1.4
 Author: dslackw
 Author-email: d zlatanidis at gmail com
 Maintainer: dslackw
@@ -22,14 +22,15 @@ Description: .. image:: https://badge.fury.io/py/colored.png
         Very simple Python library for color and formatting in terminal.
         Collection of color codes and names for 256 color terminal setups.
         The following is a list of 256 colors for Xterm, containing an example
-        of the displayed color, Xterm Name, Xterm Number.
+        of the displayed color, Xterm Name, Xterm Number and HEX.
+        
+        `[CHANGELOG] <https://github.com/dslackw/colored/blob/master/CHANGELOG>`_
         
         Video Demo
         ----------
         
-        .. image:: 
-https://raw.githubusercontent.com/dslackw/images/master/colored/video.png
-            :target: https://asciinema.org/a/10668
+        .. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/video.png
+            :target: https://asciinema.org/a/10712
         
         The following colors works with most terminals and terminals emulators.
         ANSI/VT100 escape sequences can be used in every programming languages.
@@ -320,6 +321,7 @@ https://raw.githubusercontent.com/dslackw/images/master/colored/video.png
             | 253 | grey_85             |
             | 254 | grey_89             |
             | 255 | grey_93             |
+            | 256 | default             |
             +-----+---------------------+
         
         256 Colors Foreground (text):
@@ -361,35 +363,55 @@ https://raw.githubusercontent.com/dslackw/images/master/colored/256_colors_bg.pn
         
             >>> from colored import fg, bg, attr
             >>>
-            >>> print ('%s Hello World !!! %s') % (fg(1), attr(0))
+            >>> print ('%s Hello World !!! %s' % (fg(1), attr(0)))
              Hello World !!! 
             >>> 
-            >>> print ('%s%s Hello World !!! %s') % (fg(1), bg(15), attr(0))
+            >>> print ('%s%s Hello World !!! %s' % (fg(1), bg(15), attr(0)))
              Hello World !!! 
         
         Use description:
         
         .. code-block:: bash
         
-            >>> print ('%s%s Hello World !!! %s') % (fg('white'), bg('yellow'), 
-attr('reset'))
+            >>> print ('%s%s Hello World !!! %s' % (fg('white'), bg('yellow'), 
+attr('reset')))
              Hello World !!! 
             >>> 
-            >>> print ('%s%s Hello World !!! %s') % (fg('orchid'), attr('bold'), 
-attr('reset'))
+            >>> print ('%s%s Hello World !!! %s' % (fg('orchid'), attr('bold'), 
+attr('reset')))
              Hello World !!! 
             >>>
-            >>> color = bg('indian_red_1a') + fg('white') + attr('bold')
+            >>> color = bg('indian_red_1a') + fg('white')
             >>> reset = attr('reset')
             >>> print (color + 'Hello World !!!' + reset)
             Hello World !!!
+        
+        Or use HEX code:
+        
+        .. code-block:: bash
+        
+            >>> color = fg('#c0c0c0') + bg('#00005f')
+            >>> res = attr('reset')
+            >>> print (color + "Hello World !!!" + res)
+            Hello World !!!
+        
+        Use directly like `colorama <https://pypi.python.org/pypi/colorama>`_ but with more 
+colors:
+        
+        .. code-block:: bash
+        
+            >>> from colored import fore, back, style
+            >>>
+            >>> print (fore.LIGHT_BLUE + back.RED + style.BOLD + "Hello World !!!" + 
+style.RESET)
+        
         
         Screenshot:
         
         .. image:: 
 https://raw.githubusercontent.com/dslackw/images/master/colored/screenshot-2.png
             :alt: example
-Keywords: color termcolor colour terminal linux console ansi library xterm
+Keywords: color termcolor colour terminal linux console ansi library xterm colorama
 Classifier: Development Status :: 3 - Alpha
 Classifier: Environment :: Console
 Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
