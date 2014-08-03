@@ -4,8 +4,8 @@
     :target: https://pypi.python.org/pypi/colored
 .. image:: https://pypip.in/license/colored/badge.png
     :target: https://pypi.python.org/pypi/colored
-
-
+.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/logo.png
+    :target:: https://github.com/dslackw/colored
 
 colored
 =======
