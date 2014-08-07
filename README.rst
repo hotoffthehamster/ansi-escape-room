@@ -5,7 +5,6 @@
 .. image:: https://pypip.in/license/colored/badge.png
     :target: https://pypi.python.org/pypi/colored
 
-
 Very simple Python library for color and formatting in terminal.
 Collection of color codes and names for 256 color terminal setups.
 The following is a list of 256 colors for Xterm, containing an example
