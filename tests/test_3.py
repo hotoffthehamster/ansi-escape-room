@@ -1,16 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-    
+
 '''test foreground and background colors'''
-    
+
 from colored import fg, bg, attr
 import time
-    
-    
+
+
 def main():
-    
+
     names = (
-        
+
         '#000000',
         '#800000',
         '#008000',
@@ -267,9 +267,8 @@ def main():
         '#dadada',
         '#e4e4e4',
         '#eeeeee'
-    
-        )
 
+    )
 
     for color in names:
         print (

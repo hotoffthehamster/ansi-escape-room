@@ -8,6 +8,5 @@ from .fore import fore
 from .back import back
 from .style import style
 
-__version_info__ = (1, 1, 4)
+__version_info__ = (1, 1, 5)
 __version__ = '{0}.{1}.{2}'.format(*__version_info__)
-
