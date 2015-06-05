@@ -5,3 +5,4 @@ __pycache__
 .pipy
 *.egg-info/
 *.sh
+.ropeproject
