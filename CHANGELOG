@@ -1,8 +1,9 @@
 06-06-2015
-Version 1.1.6
+Version 1.2.0
 
 [Updated] - Restore KeyError message for catching exceptions.
           - Fix foreground double key.
+          - Update modules import.
           - Update tests.
 
 25-02-2015
