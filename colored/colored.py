@@ -15,7 +15,7 @@
 """
 
 
-from hex import HEX
+from .hex import HEX
 
 
 class colored(object):
