@@ -401,6 +401,32 @@ Use directly like `colorama <https://pypi.python.org/pypi/colorama>`_ but with m
     >>>
     >>> print (fore.LIGHT_BLUE + back.RED + style.BOLD + "Hello World !!!" + style.RESET)
 
+Import colored module:
+
+.. code-block:: bash
+
+   >>> import colored
+   >>>
+   >>> colored.fg(1)
+   '\x1b[38;5;1m'
+   >>>
+   >>> colored.fg(257)
+   Traceback (most recent call last):
+     File "<input>", line 1, in <module>
+     File "/usr/lib64/python2.7/site-packages/colored/colored.py", line 381, in fg
+       return colored(color).foreground()
+     File "/usr/lib64/python2.7/site-packages/colored/colored.py", line 350, in foreground
+       color = self.reserve_paint[str(self.color)]
+   KeyError: '257'
+   >>>
+   >>> colored.bg(30)
+   '\x1b[48;5;30m'
+   >>>
+   >>> colored.fore.BLUE
+   '\x1b[38;5;4m'
+
+    etc.
+   
 
 Screenshot:
 
