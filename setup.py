@@ -5,10 +5,9 @@
 from distutils.core import setup
 from colored import __version__
 
-
 setup(
     name="colored",
-    packages=['colored'],
+    packages=["colored"],
     version=__version__,
     description="Simple library for color and formatting to terminal",
     keywords=["color", "colour", "paint", "ansi", "terminal", "linux",
@@ -18,7 +17,7 @@ setup(
     url="https://github.com/dslackw/colored",
     package_data={"": ["LICENSE", "README.rst", "CHANGELOG"]},
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: POSIX",

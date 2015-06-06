@@ -4,7 +4,7 @@
     :target: https://travis-ci.org/dslackw/colored
 .. image:: https://landscape.io/github/dslackw/colored/master/landscape.png
     :target: https://landscape.io/github/dslackw/colored/master
-.. image:: https://img.shields.io/codacy/ea3c2619e1124874a7d53079092dc956.svg
+.. image:: https://img.shields.io/codacy/92d31df45d6740ec96c3864126453928.svg
     :target: https://www.codacy.com/public/dzlatanidis/colored/dashboard
 .. image:: https://img.shields.io/pypi/dm/colored.svg
     :target: https://pypi.python.org/pypi/colored
@@ -227,7 +227,7 @@ Attributes:
     | 157 | dark_sea_sreen_2    |
     | 158 | dark_sea_sreen_1    |
     | 159 | pale_turquoise_1    |
-    | 160 | red_3a              |
+    | 160 | red_3b              |
     | 161 | deep_pink_3a        |
     | 162 | deep_pink_3b        |
     | 163 | magenta_3b          |

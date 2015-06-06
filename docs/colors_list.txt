@@ -159,7 +159,7 @@ names = (
     'dark_sea_sreen_2',
     'dark_sea_sreen_1',
     'pale_turquoise_1',
-    'red_3a',
+    'red_3b',
     'deep_pink_3a',
     'deep_pink_3b',
     'magenta_3b',

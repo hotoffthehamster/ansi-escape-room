@@ -159,7 +159,7 @@ names = (
     'fore.DARK_SEA_SREEN_2',
     'fore.DARK_SEA_SREEN_1',
     'fore.PALE_TURQUOISE_1',
-    'fore.RED_3A',
+    'fore.RED_3B',
     'fore.DEEP_PINK_3A',
     'fore.DEEP_PINK_3B',
     'fore.MAGENTA_3B',

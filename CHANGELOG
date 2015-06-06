@@ -1,9 +1,16 @@
-25-2-2015
+06-06-2015
+Version 1.1.6
+
+[Updated] - Restore KeyError message for catching exceptions.
+          - Fix foreground double key.
+          - Update tests.
+
+25-02-2015
 Version 1.1.5
 
 [Updated] - Fix pep8 style
 
-1-8-2014
+01-08-2014
 Version 1.1.4
 
 [Updated] -  Add egg-info directory
