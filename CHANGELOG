@@ -1,4 +1,9 @@
 06-06-2015
+Version 1.2.1
+
+[Updated] - Fix Python3 install.
+
+06-06-2015
 Version 1.2.0
 
 [Updated] - Restore KeyError message for catching exceptions.
