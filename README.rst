@@ -224,8 +224,8 @@ Attributes:
     | 154 | green_yellow        |
     | 155 | dark_olive_green_2  |
     | 156 | pale_green_1b       |
-    | 157 | dark_sea_sreen_2    |
-    | 158 | dark_sea_sreen_1    |
+    | 157 | dark_sea_green_5b   |
+    | 158 | dark_sea_green_5a   |
     | 159 | pale_turquoise_1    |
     | 160 | red_3b              |
     | 161 | deep_pink_3a        |

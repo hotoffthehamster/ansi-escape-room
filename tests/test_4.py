@@ -165,8 +165,8 @@ def main():
     print fore.GREEN_YELLOW + "Hello World !!!" + style.RESET
     print fore.DARK_OLIVE_GREEN_2 + "Hello World !!!" + style.RESET
     print fore.PALE_GREEN_1B + "Hello World !!!" + style.RESET
-    print fore.DARK_SEA_SREEN_2 + "Hello World !!!" + style.RESET
-    print fore.DARK_SEA_SREEN_1 + "Hello World !!!" + style.RESET
+    print fore.DARK_SEA_GREEN_5B + "Hello World !!!" + style.RESET
+    print fore.DARK_SEA_GREEN_5A + "Hello World !!!" + style.RESET
     print fore.PALE_TURQUOISE_1 + "Hello World !!!" + style.RESET
     print fore.RED_3B + "Hello World !!!" + style.RESET
     print fore.DEEP_PINK_3A + "Hello World !!!" + style.RESET
@@ -422,8 +422,8 @@ def main():
     print back.GREEN_YELLOW + "Hello World !!!" + style.RESET
     print back.DARK_OLIVE_GREEN_2 + "Hello World !!!" + style.RESET
     print back.PALE_GREEN_1B + "Hello World !!!" + style.RESET
-    print back.DARK_SEA_SREEN_2 + "Hello World !!!" + style.RESET
-    print back.DARK_SEA_SREEN_1 + "Hello World !!!" + style.RESET
+    print back.DARK_SEA_GREEN_5B + "Hello World !!!" + style.RESET
+    print back.DARK_SEA_GREEN_5A + "Hello World !!!" + style.RESET
     print back.PALE_TURQUOISE_1 + "Hello World !!!" + style.RESET
     print back.RED_3A + "Hello World !!!" + style.RESET
     print back.DEEP_PINK_3A + "Hello World !!!" + style.RESET

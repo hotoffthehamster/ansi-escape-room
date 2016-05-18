@@ -186,8 +186,8 @@ class back(object):
     GREEN_YELLOW = ESC + "154" + END
     DARK_OLIVE_GREEN_2 = ESC + "155" + END
     PALE_GREEN_1B = ESC + "156" + END
-    DARK_SEA_SREEN_2 = ESC + "157" + END
-    DARK_SEA_SREEN_1 = ESC + "158" + END
+    DARK_SEA_GREEN_5B = ESC + "157" + END
+    DARK_SEA_GREEN_5A = ESC + "158" + END
     PALE_TURQUOISE_1 = ESC + "159" + END
     RED_3A = ESC + "160" + END
     DEEP_PINK_3A = ESC + "161" + END
