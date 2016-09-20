@@ -189,7 +189,7 @@ class back(object):
         'DARK_SEA_GREEN_5B',
         'DARK_SEA_GREEN_5A',
         'PALE_TURQUOISE_1',
-        'RED_3A',
+        'RED_3B',
         'DEEP_PINK_3A',
         'DEEP_PINK_3B',
         'MAGENTA_3B',
