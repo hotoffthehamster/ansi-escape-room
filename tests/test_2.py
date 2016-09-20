@@ -270,12 +270,12 @@ def main():
     )
 
     for color in colors:
-        print (
+        print(
             "{}This text is colored: {}{}".format(
                 fg(color),
                 color,
                 attr("reset")))
-        print (
+        print(
             "{}This text is colored: {}{}".format(
                 bg(color),
                 color,
