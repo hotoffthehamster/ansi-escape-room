@@ -30,5 +30,5 @@ from .fore import *
 from .back import *
 from .style import *
 
-__version_info__ = (1, 3, 1)
+__version_info__ = (1, 3, 2)
 __version__ = '{0}.{1}.{2}'.format(*__version_info__)
