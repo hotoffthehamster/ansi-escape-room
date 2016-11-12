@@ -57,7 +57,7 @@ Attributes:
     |  25 | res_blink        |
     |  27 | res_reverse      |
     |  28 | res_hidden       |
-    +------------------------+  
+    +------------------------+
 
 
 256 Foreground and Background Colors - Full Chart:
@@ -84,8 +84,8 @@ Attributes:
     | 14  | light_cyan          |
     | 15  | white               |
     | 16  | grey_0              |
-    | 17  | navy_blue           |  
-    | 18  | dark_blue           |  
+    | 17  | navy_blue           |
+    | 18  | dark_blue           |
     | 19  | blue_3a             |
     | 20  | blue_3b             |
     | 21  | blue_1              |
@@ -364,20 +364,20 @@ How to use the module in your own python code:
     >>> from colored import fg, bg, attr
     >>>
     >>> print ('%s Hello World !!! %s' % (fg(1), attr(0)))
-     Hello World !!! 
-    >>> 
+     Hello World !!!
+    >>>
     >>> print ('%s%s Hello World !!! %s' % (fg(1), bg(15), attr(0)))
-     Hello World !!! 
+     Hello World !!!
 
 Use description:
 
 .. code-block:: bash
 
     >>> print ('%s%s Hello World !!! %s' % (fg('white'), bg('yellow'), attr('reset')))
-     Hello World !!! 
-    >>> 
+     Hello World !!!
+    >>>
     >>> print ('%s%s Hello World !!! %s' % (fg('orchid'), attr('bold'), attr('reset')))
-     Hello World !!! 
+     Hello World !!!
     >>>
     >>> color = bg('indian_red_1a') + fg('white')
     >>> reset = attr('reset')
@@ -388,7 +388,7 @@ Or use HEX code:
 
 .. code-block:: bash
 
-    >>> color = fg('#c0c0c0') + bg('#00005f')
+    >>> color = fg('#C0C0C0') + bg('#00005f')
     >>> res = attr('reset')
     >>> print (color + "Hello World !!!" + res)
     Hello World !!!
@@ -426,7 +426,7 @@ Import colored module:
    '\x1b[38;5;4m'
 
     etc.
-   
+
 
 Screenshot:
 

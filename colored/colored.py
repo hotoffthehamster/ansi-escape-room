@@ -46,7 +46,7 @@ class colored(object):
         self.color = color
 
         if str(color).startswith("#"):
-            self.HEX = HEX(color)
+            self.HEX = HEX(color.lower())
         else:
             self.HEX = ""
 
