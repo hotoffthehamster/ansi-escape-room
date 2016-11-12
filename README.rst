@@ -401,8 +401,8 @@ Or the convenient `stylize(text, *styles)` wrapper to save some keystrokes:
     >>> from colored import stylize
     >>> print(stylize("This is green.", colored.fg("green")))
     This is green.
-    >>> print("This isn't.")
-    This isn't.
+    >>> print("This is not.")
+    This is not.
     >>> angry = colored.fg("red") + colored.attr("bold")
     >>> print(stylize("This is angry text.", angry))
     This is angry text.
