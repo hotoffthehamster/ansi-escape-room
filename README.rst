@@ -393,6 +393,24 @@ Or use HEX code:
     >>> print (color + "Hello World !!!" + res)
     Hello World !!!
 
+Or the convenient `stylize(text, *styles)` wrapper to save some keystrokes:
+
+.. code-block:: bash
+
+    >>> import colored
+    >>> from colored import stylize
+    >>> print(stylize("This is green.", colored.fg("green")))
+    This is green.
+    >>> print("This isn't.")
+    This isn't.
+    >>> angry = colored.fg("red") + colored.attr("bold")
+    >>> print(stylize("This is angry text.", angry))
+    This is angry text.
+    >>> print(stylize("This is VERY angry text.", angry, colored.attr("underlined")))
+    This is VERY angry text.
+    >>> print("But this is not.")
+    But this is not.
+
 Use directly like `colorama <https://pypi.python.org/pypi/colorama>`_ but with more colors:
 
 .. code-block:: bash

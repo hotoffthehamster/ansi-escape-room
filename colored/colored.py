@@ -384,3 +384,8 @@ def fg(color):
 def bg(color):
     """alias for colored().background()"""
     return colored(color).background()
+
+
+def stylize(text, *styles):
+    """conveniently styles your text as and resets ANSI codes at its end."""
+    return "{}{}{}".format("".join(styles), text, attr("reset"))
