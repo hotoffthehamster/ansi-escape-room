@@ -386,6 +386,7 @@ def bg(color):
     return colored(color).background()
 
 
-def stylize(text, *styles):
+def stylize(text, *styles, reset=True):
     """conveniently styles your text as and resets ANSI codes at its end."""
-    return "{}{}{}".format("".join(styles), text, attr("reset"))
+    terminator = attr("reset") if reset else ""
+    return "{}{}{}".format("".join(styles), text, terminator)
