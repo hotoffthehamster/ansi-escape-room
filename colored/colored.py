@@ -4,7 +4,7 @@
 """
 colored.py is a part of colored.
 
-Copyright 2014-2016 Dimitris Zlatanidis <d.zlatanidis@gmail.com>
+Copyright 2014-2017 Dimitris Zlatanidis <d.zlatanidis@gmail.com>
 All rights reserved.
 
 Colored is very simple Python library for color and formatting in terminal.
