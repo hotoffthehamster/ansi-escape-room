@@ -241,12 +241,12 @@ Attributes:
     | 171 | medium_orchid_1a    |
     | 172 | orange_3            |
     | 173 | light_salmon_3b     |
-    | 174 | light_Pink_3        |
+    | 174 | light_pink_3        |
     | 175 | pink_3              |
     | 176 | plum_3              |
     | 177 | violet              |
     | 178 | gold_3b             |
-    | 179 | light_Goldenrod_3   |
+    | 179 | light_goldenrod_3   |
     | 180 | tan                 |
     | 181 | misty_rose_3        |
     | 182 | thistle_3           |
