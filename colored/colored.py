@@ -390,3 +390,19 @@ def stylize(text, styles, reset=True):
     """conveniently styles your text as and resets ANSI codes at its end."""
     terminator = attr("reset") if reset else ""
     return "{}{}{}".format("".join(styles), text, terminator)
+
+
+def _c0wrap(styles):
+    """wrap a set of ANSI styles in C0 control codes for readline safety."""
+    C0_SOH = '\x01'   # mark the beginning of nonprinting characters
+    C0_STX = '\x02'   # mark the end of nonprinting characters
+    return "{}{}{}".format(C0_SOH, "".join(styles), C0_STX)
+
+
+def stylize_interactive(text, styles, reset=True):
+    """stylize() variant that adds C0 control codes (SOH/STX) for readline safety."""
+    # problem: readline includes bare ANSI codes in width calculations.
+    # solution: wrap nonprinting codes in SOH/STX when necessary.
+    # see: https://github.com/dslackw/colored/issues/5
+    terminator = _c0wrap(attr("reset")) if reset else ""
+    return "{}{}{}".format(_c0wrap(styles), text, terminator)
