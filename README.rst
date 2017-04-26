@@ -411,6 +411,15 @@ Or the convenient `stylize(text, *styles)` wrapper to save some keystrokes:
     >>> print("But this is not.")
     But this is not.
 
+Or the variant `stylize_interactive(text, *styles)` for readline-friendliness:
+
+.. code-block:: bash
+
+    >>> import colored, sys
+    >>> from colored import stylize_interactive, fg
+    >>> sys.ps1 = stylize_interactive("myPrompt: ", fg('red'))
+    myPrompt:
+
 Use directly like `colorama <https://pypi.python.org/pypi/colorama>`_ but with more colors:
 
 .. code-block:: bash
