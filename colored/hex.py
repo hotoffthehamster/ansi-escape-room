@@ -283,7 +283,6 @@ def HEX(color):
         "253": "#dadada",
         "254": "#e4e4e4",
         "255": "#eeeeee"
-
     }
 
     # swap keys for values
