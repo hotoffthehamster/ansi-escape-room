@@ -1,23 +1,3 @@
-.. image:: https://img.shields.io/github/release/dslackw/colored.svg
-    :target: https://github.com/dslackw/colored/releases
-.. image:: https://travis-ci.org/dslackw/colored.svg?branch=master
-    :target: https://travis-ci.org/dslackw/colored
-.. image:: https://landscape.io/github/dslackw/colored/master/landscape.png
-    :target: https://landscape.io/github/dslackw/colored/master
-.. image:: https://img.shields.io/codacy/92d31df45d6740ec96c3864126453928.svg
-    :target: https://www.codacy.com/public/dzlatanidis/colored/dashboard
-.. image:: https://img.shields.io/pypi/dm/colored.svg
-    :target: https://pypi.python.org/pypi/colored
-.. image:: https://img.shields.io/badge/license-GPLv3-blue.svg
-    :target: https://github.com/dslackw/colored
-.. image:: https://img.shields.io/github/stars/dslackw/colored.svg
-    :target: https://github.com/dslackw/colored
-.. image:: https://img.shields.io/github/forks/dslackw/colored.svg
-    :target: https://github.com/dslackw/colored
-.. image:: https://img.shields.io/github/issues/dslackw/colored.svg
-    :target: https://github.com/dslackw/colored/issues
-
-
 Very simple Python library for color and formatting in terminal.
 Collection of color codes and names for 256 color terminal setups.
 The following is a list of 256 colors for Xterm, containing an example
