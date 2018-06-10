@@ -3,15 +3,15 @@ Collection of color codes and names for 256 color terminal setups.
 The following is a list of 256 colors for Xterm, containing an example
 of the displayed color, Xterm Name, Xterm Number and HEX.
 
-.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/logo.png
-    :target: https://github.com/dslackw/colored
+.. image:: https://gitlab.com/dslackw/images/raw/master/colored/logo.png
+    :target: https://gitlab.com/dslackw/colored
 
-`[CHANGELOG] <https://github.com/dslackw/colored/blob/master/CHANGELOG>`_
+`[CHANGELOG] <https://gitlab.com/dslackw/colored/blob/master/CHANGELOG>`_
 
 Video Demo
 ----------
 
-.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/video.png
+.. image:: https://gitlab.com/dslackw/images/raw/master/colored/video.png
     :target: https://asciinema.org/a/10712
 
 The following colors works with most terminals and terminals emulators.
@@ -308,12 +308,12 @@ Attributes:
 
 256 Colors Foreground (text):
 
-.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/256_colors_fg.png
+.. image:: https://gitlab.com/dslackw/images/raw/master/colored/256_colors_fg.png
     :alt: 256 fg colors
 
 256 Colors Background:
 
-.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/256_colors_bg.png
+.. image:: https://gitlab.com/dslackw/images/raw/master/colored/256_colors_bg.png
     :alt: 256 bg colors
 
 
@@ -437,5 +437,5 @@ Import colored module:
 
 Screenshot:
 
-.. image:: https://raw.githubusercontent.com/dslackw/images/master/colored/screenshot-2.png
+.. image:: https://gitlab.com/dslackw/images/raw/master/colored/screenshot-2.png
     :alt: example
