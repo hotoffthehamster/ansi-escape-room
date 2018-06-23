@@ -1,6 +1,7 @@
 names = (
     'style.BOLD',
     'style.DIM',
+    'style.ITALIC',
     'style.UNDERLINED',
     'style.BLINK',
     'style.REVERSE',
@@ -8,6 +9,7 @@ names = (
     'style.RESET',
     'style.RES_BOLD',
     'style.RES_DIM',
+    'style.RES_ITALIC',
     'style.RES_UNDERLINED',
     'style.RES_BLINK',
     'style.RES_REVERSE',

@@ -10,6 +10,7 @@ class style(object):
     names = {
         'BOLD': 1,
         'DIM': 2,
+        'ITALIC': 3,
         'UNDERLINED': 4,
         'BLINK': 5,
         'REVERSE': 7,
@@ -17,6 +18,7 @@ class style(object):
         'RESET': 0,
         'RES_BOLD': 21,
         'RES_DIM': 22,
+        'RES_ITALIC': 23,
         'RES_UNDERLINED': 24,
         'RES_BLINK': 25,
         'RES_REVERSE': 27,
