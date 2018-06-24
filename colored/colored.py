@@ -1,38 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
-colored.py is a part of colored.
-
-Copyright 2014-2017 Dimitris Zlatanidis <d.zlatanidis@gmail.com>
-All rights reserved.
-
-Colored is very simple Python library for color and formatting in terminal.
-
-https://github.com/dslackw/colored
-
-colored is free software: you can redistribute it and/or
-modify it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-               _                    _
-      ___ ___ | | ___  _ __ ___  __| |
-     / __/ _ \| |/ _ \| "__/ _ \/ _` |
-    | (_| (_) | | (_) | | |  __/ (_| |
-     \___\___/|_|\___/|_|  \___|\__,_|
-
-    Very simple Python library for color and formatting in terminal.
-    Collection of color codes and names for 256 color terminal setups.
-    The following is a list of 256 colors for Xterm, containing an example
-    of the displayed color, Xterm Name, Xterm Number.
-"""
-
 
 from .hex import HEX
 
@@ -404,6 +372,6 @@ def stylize_interactive(text, styles, reset=True):
     safety."""
     # problem: readline includes bare ANSI codes in width calculations.
     # solution: wrap nonprinting codes in SOH/STX when necessary.
-    # see: https://github.com/dslackw/colored/issues/5
+    # see: https://gitlab.com/dslackw/colored/issues/5
     terminator = _c0wrap(attr("reset")) if reset else ""
     return "{}{}{}".format(_c0wrap(styles), text, terminator)
