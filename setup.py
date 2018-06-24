@@ -20,7 +20,7 @@ setup(
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
-        "License :: OSI Approved :: MIT license",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: POSIX",
         "Operating System :: POSIX :: Linux",
         "Operating System :: POSIX :: Other",
