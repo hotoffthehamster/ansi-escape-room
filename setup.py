@@ -17,6 +17,7 @@ setup(
     author_email="d.zlatanidis@gamil.com",
     url="https://gitlab.com/dslackw/colored",
     package_data={"": ["LICENSE", "README.rst", "CHANGELOG"]},
+    include_package_data=True,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
