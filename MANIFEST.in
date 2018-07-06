@@ -7,7 +7,7 @@ include colored/fore.py
 include colored/hex.py
 include colored/style.py
 include CHANGES.md
-include LICENCE.txt
+include LICENSE.txt
 include README.rst
 recursive-include tests *.py
 recursive-include docs *.txt
