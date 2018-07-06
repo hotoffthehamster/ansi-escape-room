@@ -1,6 +1,10 @@
 colored
 =====
 
+Version 1.3.93 - *(06-07-2018)*
+### Fixed
+- Typo in MANIFEST file
+
 Version 1.3.92 - *(02-07-2018)*
 -----
 
