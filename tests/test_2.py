@@ -4,7 +4,7 @@
 """test foreground and background colors"""
 
 import time
-from colored import fg, bg, attr
+from ansi_escape_room import fg, bg, attr
 
 
 def main():

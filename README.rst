@@ -324,11 +324,11 @@ Installation
 
 .. code-block:: bash
 
-    $ pip install colored --upgrade
+    $ pip install ansi-escape-room --upgrade
 
     # Uninstall:
 
-    $ pip uninstall colored
+    $ pip uninstall ansi-escape-room
 
 
 Dependencies
