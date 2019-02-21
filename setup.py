@@ -3,7 +3,7 @@
 
 import setuptools
 from distutils.core import setup
-from colored import __version__
+from ansi_escape_room import __version__
 
 
 setup(
