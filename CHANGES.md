@@ -1,3 +1,13 @@
+ansi-escape-room
+=====
+
+version 1.4.2 - *(03-28-2020)*
+-----
+
+### Added
+- Italic support
+- TrueColor™ support
+
 colored
 =====
 
