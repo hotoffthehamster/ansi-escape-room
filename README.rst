@@ -326,7 +326,7 @@ Installation
 
     $ pip install colored --upgrade
 
-    uninstall
+    # Uninstall:
 
     $ pip uninstall colored
 
@@ -334,7 +334,7 @@ Installation
 Dependencies
 ------------
 
-None, only Python progmamming language.
+None, only Python programming language.
 
 Usage Examples
 --------------
