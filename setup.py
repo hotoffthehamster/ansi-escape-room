@@ -11,16 +11,16 @@ from ansi_escape_room import __version__
 
 
 setup(
-    name="colored",
-    packages=["colored"],
+    name="ansi-escape-room",
+    packages=["ansi_escape_room"],
     version=__version__,
     description="Simple library for color and formatting to terminal",
     long_description=open("README.rst").read(),
     keywords=["color", "colour", "paint", "ansi", "terminal", "linux",
               "python"],
-    author="dslackw",
-    author_email="d.zlatanidis@gamil.com",
-    url="https://gitlab.com/dslackw/colored",
+    author='HotOffThe Hamster',
+    author_email='hotoffthehamster+ansiescaperoom@gmail.com',
+    url="https://github.com/hotoffthehamster/ansi-escape-room",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
