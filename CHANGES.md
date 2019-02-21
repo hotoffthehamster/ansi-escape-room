@@ -1,3 +1,10 @@
+ansi-escape-room
+=====
+
+Version 1.3.94 - *(02-20-2019)*
+### Added
+- Italic support (experimental)
+
 colored
 =====
 
