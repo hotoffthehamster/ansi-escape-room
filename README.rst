@@ -26,6 +26,7 @@ Attributes:
     +-----+------------------+
     |  1  | bold             |
     |  2  | dim              |
+    |  3  | italic           |
     |  4  | underlined       |
     |  5  | blink            |
     |  7  | reverse          |
@@ -33,6 +34,7 @@ Attributes:
     |  0  | reset            |
     |  21 | res_bold         |
     |  22 | res_dim          |
+    |  23 | res_italic       |
     |  24 | res_underlined   |
     |  25 | res_blink        |
     |  27 | res_reverse      |
