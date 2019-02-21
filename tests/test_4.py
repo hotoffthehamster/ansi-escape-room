@@ -3,7 +3,7 @@
 
 """test foreground and background colors"""
 
-from colored import fore, back, style
+from ansi_escape_room import fore, back, style
 
 
 def main():

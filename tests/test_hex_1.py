@@ -5,8 +5,8 @@
 
 import time
 from random import randint
-from colored import fg, bg, attr
-from colored.hex import HEX, _xterm_colors
+from ansi_escape_room import fg, bg, attr
+from ansi_escape_room.hex import HEX, _xterm_colors
 
 def compare_with_expected( in_hex, expected ):
     nearest = HEX( in_hex )

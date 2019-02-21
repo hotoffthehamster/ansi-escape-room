@@ -4,7 +4,7 @@
 """Test the shorthand #abc hex expansion"""
 
 import time
-from colored.hex import HEX
+from ansi_escape_room.hex import HEX
 
 def main():
     all_ok = True
