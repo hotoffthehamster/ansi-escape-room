@@ -12,14 +12,10 @@ def main():
         T_sta = time.perf_counter()
         for r in range(0,0xF):
             for g in range(0,0xF):
-                last=None
                 for b in range(0,0xF):
                     short = '#%x%x%x' % (r,g,b)
                     long = '#%x%x%x%x%x%x' % (r,r,g,g,b,b)
-                    #print( '%s -> %s = %s <=> %s' % (long, HEX(long), HEX( short ), HEX(long) == HEX( short )) )
-                    #all_ok = all_ok and HEX( long ) == HEX( short )
-                    last = HEX( long )
-                    all_ok = all_ok and last == HEX( short )
+                    all_ok = all_ok and HEX( long ) == HEX( short )
                 print('.', end='')
             print('')
 
