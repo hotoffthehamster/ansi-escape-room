@@ -263,6 +263,39 @@ def HEX(color):
         "255": "#eeeeee"
     }
 
+    # Extend shorthand #ABC -> #AABBCC, like in CSS
+    if len(color) == 4:
+        color = '#'+color[1]*2+color[2]*2+color[3]*2
+
     # swap keys for values
     new_xterm_colors = dict(zip(xterm_colors.values(), xterm_colors.keys()))
-    return new_xterm_colors[color]
+    if color in new_xterm_colors.keys():
+        return new_xterm_colors[color]
+
+    # Try to find nearest match using a simple least squares fit.
+    # We could try to factor in human perception bias by weighting
+    # as suggested by <https://stackoverflow.com/a/1847112> but for
+    # now lets just KISS and make upp our minds later, no?
+    # (we do skip the sqrt since we just care for the relative value)
+    #  * Idea for optimization: seatch the xterm_colors list sorted lexically and bail out when color > current_item (also lexically, no need to convert the string) ; though this only works as long as we don't weight the colors
+
+    # The reference color
+    r,g,b = (int(color[1:3],16), int(color[3:5],16), int(color[5:7],16))
+
+    cube = lambda x : x*x
+    f = lambda hex_val,ref : cube(int(hex_val,16) - ref)
+
+    # Fallback to white, rather than a KeyError
+    min_cube_d=cube(0xFFFFFF)
+    nearest = '15'
+
+    #from math import sqrt # DEBUG
+    for k,h in xterm_colors.items():
+        cube_d = f(h[1:3],r) + f(h[3:5],g) + f(h[5:7],b)
+        #if cube_d > 0xff and k!='2': continue # DEBUG
+        #print( '%3d %s %s % 5.1f  % 6x' % (int(k), color,h,sqrt(cube_d),cube_d)) # DEBUG
+        if cube_d < min_cube_d:
+            min_cube_d = cube_d
+            nearest = k
+
+    return nearest
