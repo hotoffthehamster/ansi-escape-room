@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import platform
 
 from .hex import HEX
 
@@ -12,6 +13,9 @@ class colored(object):
         self.ESC = "\x1b["
         self.END = "m"
         self.color = color
+        self.win_vterm_mode = None
+        # Maybe let this be a user choice?
+        self.enable_windows_terminal_mode()
 
         if str(color).startswith("#"):
             self.HEX = HEX(color.lower())
@@ -338,6 +342,19 @@ class colored(object):
         """reverse dictionary"""
         self.reserve_paint = dict(zip(self.paint.values(), self.paint.keys()))
 
+    def enable_windows_terminal_mode(self):
+        '''Enable virtual terminal processing in windows terminal'''
+        if self.win_vterm_mode == False:
+            return
+        self.win_vterm_mode = platform.system().lower() == 'windows'
+        from ctypes import windll, c_int, byref
+        from ctypes import c_int, byref
+        ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
+        hStdout = windll.kernel32.GetStdHandle(c_int(-11))
+        mode = c_int(0)
+        windll.kernel32.GetConsoleMode(c_int(hStdout), byref(mode))
+        mode = c_int(mode.value | ENABLE_VIRTUAL_TERMINAL_PROCESSING)
+        windll.kernel32.SetConsoleMode(c_int(hStdout), mode)
 
 def attr(color):
     """alias for colored().attribute()"""
