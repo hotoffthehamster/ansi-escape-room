@@ -5,6 +5,7 @@ import platform
 
 from .hex import HEX
 
+_win_vterm_mode = None
 
 class colored(object):
 
@@ -343,12 +344,19 @@ class colored(object):
         self.reserve_paint = dict(zip(self.paint.values(), self.paint.keys()))
 
     def enable_windows_terminal_mode(self):
-        '''Enable virtual terminal processing in windows terminal'''
-        if self.win_vterm_mode == False:
+        '''Enable virtual terminal processing in windows terminal. Does
+        nothing if not on Windows. This is based on the rejected
+        enhancement <https://bugs.python.org/issue29059>.'''
+        global _win_vterm_mode
+        if _win_vterm_mode != None:
+            return _win_vterm_mode
+
+        # Note: Cygwin should return something like "CYGWIN_NT..."
+        _win_vterm_mode = platform.system().lower() == 'windows'
+        if _win_vterm_mode == False:
             return
-        self.win_vterm_mode = platform.system().lower() == 'windows'
+
         from ctypes import windll, c_int, byref
-        from ctypes import c_int, byref
         ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
         hStdout = windll.kernel32.GetStdHandle(c_int(-11))
         mode = c_int(0)
