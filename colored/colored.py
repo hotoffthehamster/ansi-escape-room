@@ -354,13 +354,32 @@ class colored(object):
         if _win_vterm_mode == False:
             return
 
-        from ctypes import windll, c_int, byref
+        from ctypes import windll, c_int, byref, c_void_p
         ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
-        hStdout = windll.kernel32.GetStdHandle(c_int(-11))
+        INVALID_HANDLE_VALUE = c_void_p(-1).value
+        STD_OUTPUT_HANDLE = c_int(-11)
+
+        hStdout = windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+        if hStdout == INVALID_HANDLE_VALUE:
+            _win_vterm_mode = False
+            return
+
         mode = c_int(0)
-        windll.kernel32.GetConsoleMode(c_int(hStdout), byref(mode))
+        ok = windll.kernel32.GetConsoleMode(c_int(hStdout), byref(mode))
+        if not ok:
+            _win_vterm_mode = False
+            return
+
         mode = c_int(mode.value | ENABLE_VIRTUAL_TERMINAL_PROCESSING)
-        windll.kernel32.SetConsoleMode(c_int(hStdout), mode)
+        ok = windll.kernel32.SetConsoleMode(c_int(hStdout), mode)
+        if not ok:
+            # Something went wrong, proably an too old version
+            # that doesn't support the VT100 mode.
+            # To be more certain we could check kernel32.GetLastError
+            # for STATUS_INVALID_PARAMETER, but since we only enable
+            # one flag we can be certain enough.
+            _win_vterm_mode = False
+            return
 
 def attr(color):
     """alias for colored().attribute()"""
