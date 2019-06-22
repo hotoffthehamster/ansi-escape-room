@@ -14,7 +14,6 @@ class colored(object):
         self.ESC = "\x1b["
         self.END = "m"
         self.color = color
-        self.win_vterm_mode = None
         # Maybe let this be a user choice?
         self.enable_windows_terminal_mode()
 
