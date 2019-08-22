@@ -4,6 +4,12 @@
 import platform
 
 from .hex import HEX
+from os import isatty
+import sys
+
+
+TTY_AWARE = False
+IS_TTY = isatty(sys.stdout.fileno()) and isatty(sys.stderr.fileno())
 
 _win_vterm_mode = None
 
@@ -282,6 +288,8 @@ class colored(object):
 
     def attribute(self):
         """Set or reset attributes"""
+        if TTY_AWARE and not IS_TTY:
+            return ""
 
         paint = {
             "bold": self.ESC + "1" + self.END,
@@ -315,6 +323,8 @@ class colored(object):
 
     def foreground(self):
         """Print 256 foreground colors"""
+        if TTY_AWARE and not IS_TTY:
+            return ""
         code = self.ESC + "38;5;"
         if str(self.color).isdigit():
             self.reverse_dict()
@@ -327,6 +337,8 @@ class colored(object):
 
     def background(self):
         """Print 256 background colors"""
+        if TTY_AWARE and not IS_TTY:
+            return ""
         code = self.ESC + "48;5;"
         if str(self.color).isdigit():
             self.reverse_dict()
@@ -417,3 +429,10 @@ def stylize_interactive(text, styles, reset=True):
     # see: https://gitlab.com/dslackw/colored/issues/5
     terminator = _c0wrap(attr("reset")) if reset else ""
     return "{}{}{}".format(_c0wrap(styles), text, terminator)
+
+def set_tty_aware():
+    """Makes all interactions here tty aware.  This means that if either
+    stdout or stderr are directed to something other than a tty,
+    colorization will not be added."""
+    global TTY_AWARE
+    TTY_AWARE = True
