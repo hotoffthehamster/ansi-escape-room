@@ -23,6 +23,7 @@ setup(
         "Operating System :: POSIX",
         "Operating System :: POSIX :: Linux",
         "Operating System :: POSIX :: Other",
+        "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.6",
