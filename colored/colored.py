@@ -1,9 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import platform
 
 from .hex import HEX
 
+_win_vterm_mode = None
 
 class colored(object):
 
@@ -12,6 +14,7 @@ class colored(object):
         self.ESC = "\x1b["
         self.END = "m"
         self.color = color
+        self.enable_windows_terminal_mode()
 
         if str(color).startswith("#"):
             self.HEX = HEX(color.lower())
@@ -338,6 +341,45 @@ class colored(object):
         """reverse dictionary"""
         self.reserve_paint = dict(zip(self.paint.values(), self.paint.keys()))
 
+    def enable_windows_terminal_mode(self):
+        '''Enable virtual terminal processing in windows terminal. Does
+        nothing if not on Windows. This is based on the rejected
+        enhancement <https://bugs.python.org/issue29059>.'''
+        global _win_vterm_mode
+        if _win_vterm_mode != None:
+            return _win_vterm_mode
+
+        # Note: Cygwin should return something like "CYGWIN_NT..."
+        _win_vterm_mode = platform.system().lower() == 'windows'
+        if _win_vterm_mode == False:
+            return
+
+        from ctypes import windll, c_int, byref, c_void_p
+        ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
+        INVALID_HANDLE_VALUE = c_void_p(-1).value
+        STD_OUTPUT_HANDLE = c_int(-11)
+
+        hStdout = windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+        if hStdout == INVALID_HANDLE_VALUE:
+            _win_vterm_mode = False
+            return
+
+        mode = c_int(0)
+        ok = windll.kernel32.GetConsoleMode(c_int(hStdout), byref(mode))
+        if not ok:
+            _win_vterm_mode = False
+            return
+
+        mode = c_int(mode.value | ENABLE_VIRTUAL_TERMINAL_PROCESSING)
+        ok = windll.kernel32.SetConsoleMode(c_int(hStdout), mode)
+        if not ok:
+            # Something went wrong, proably an too old version
+            # that doesn't support the VT100 mode.
+            # To be more certain we could check kernel32.GetLastError
+            # for STATUS_INVALID_PARAMETER, but since we only enable
+            # one flag we can be certain enough.
+            _win_vterm_mode = False
+            return
 
 def attr(color):
     """alias for colored().attribute()"""
