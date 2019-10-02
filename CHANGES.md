@@ -1,7 +1,19 @@
 colored
 =====
 
+Version 1.4.0 - *(02-10-2019)*
+-----
+
+### Added
+- Ensure package data is included !7
+- Converted old package spec files to new format !9
+- Hex improvements !11
+- Enable colors in Windows' terminal !12
+- Added an option to make colored tty aware !13
+
 Version 1.3.93 - *(06-07-2018)*
+-----
+
 ### Fixed
 - Typo in MANIFEST file
 
