@@ -4,7 +4,6 @@
 import platform
 
 from .hex import HEX
-from os import isatty
 import sys
 
 
