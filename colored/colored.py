@@ -4,12 +4,11 @@
 import platform
 
 from .hex import HEX
-from os import isatty
 import sys
 
 
 TTY_AWARE = False
-IS_TTY = isatty(sys.stdout.fileno()) and isatty(sys.stderr.fileno())
+IS_TTY = sys.stdout.isatty() and sys.stderr.isatty()
 
 _win_vterm_mode = None
 
