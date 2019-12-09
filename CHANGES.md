@@ -2,6 +2,7 @@ colored
 =====
 
 Version 1.4.1 - *(28-10-2019)*
+-----
 
 ### Fixed
 - UnsupportedOperation: fileno when detecting TTY #14
