@@ -12,7 +12,7 @@ Video Demo
 ----------
 
 .. image:: https://gitlab.com/dslackw/images/raw/master/colored/video.png
-    :target: https://asciinema.org/a/10712
+    :target: https://asciinema.org/a/bgxm6KisSvPkPwMsYLyBBJjth
 
 The following colors works with most terminals and terminals emulators.
 ANSI/VT100 escape sequences can be used in every programming languages.
