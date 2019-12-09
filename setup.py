@@ -1,8 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import setuptools
-from distutils.core import setup
+
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
 from colored import __version__
 
 
@@ -11,6 +15,7 @@ setup(
     packages=["colored"],
     version=__version__,
     description="Simple library for color and formatting to terminal",
+    long_description=open("README.rst").read(),
     keywords=["color", "colour", "paint", "ansi", "terminal", "linux",
               "python"],
     author="dslackw",
@@ -22,6 +27,9 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: POSIX",
         "Operating System :: POSIX :: Linux",
+        "Operating System :: Microsoft",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: Microsoft :: Windows :: Windows 10",
         "Operating System :: POSIX :: Other",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
@@ -35,6 +43,5 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Unix Shell",
-        "Topic :: Terminals"],
-    long_description=open("README.rst").read()
+        "Topic :: Terminals"]
 )

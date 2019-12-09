@@ -1,6 +1,14 @@
 colored
 =====
 
+version 1.4.2 - *(07-12-2019)*
+-----
+
+### Updated
+- Python 3 compatibility
+- setup.py file 
+
+
 Version 1.4.1 - *(28-10-2019)*
 -----
 
