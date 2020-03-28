@@ -12,6 +12,27 @@ IS_TTY = sys.stdout.isatty() and sys.stderr.isatty()
 
 _win_vterm_mode = None
 
+# From:
+#   https://github.com/ubernostrum/webcolors
+def _hex_to_rgb(hex_value):
+    """
+    Convert a hexadecimal color value to a 3-tuple of integers
+    suitable for use in an ``rgb()`` triplet specifying that color.
+    """
+    int_value = int(hex_value[1:], 16)
+    return (int_value >> 16, int_value >> 8 & 0xFF, int_value & 0xFF)
+
+
+def _rgb_to_hex(rgb_triplet, delim=''):
+    """
+    Convert a 3-tuple of integers, suitable for use in an ``rgb()``
+    color triplet, to a normalized hexadecimal value for that color.
+    """
+    return "{:02x}{}{:02x}{}{:02x}".format(
+        rgb_triplet[0], delim, rgb_triplet[1], delim, rgb_triplet[2],
+    )
+
+
 class colored(object):
 
     ESC = "\x1b["
@@ -310,13 +331,34 @@ class colored(object):
         28: ESC + "28" + END,
     }
 
+    USE_TRUE_COLORS = True
+
     def __init__(self, color):
         self.color = color
         self.enable_windows_terminal_mode()
+        self.HEX = ''
+        self.RGB = ''
         if str(color).startswith("#"):
-            self.HEX = HEX(color.lower())
-        else:
-            self.HEX = ""
+            if not colored.USE_TRUE_COLORS:
+                # Convert #RRGGBB back to 0-255 ANSI color code (as string, not int).
+                # This raises if value does not match basic 256 color (from the cube).
+                self.HEX = HEX(color.lower())
+            else:
+                # (lb): In a tmux, with TERM=xterm, not all of the pre-canned ANSI
+                # 256 colors render correctly -- some get "rounded" to the nearest
+                # higher order color value. For example, on my machines, the
+                # lightorange color, which you can test via:
+                #     echo -e "\033[38;5;215m$(tput sgr0)" TEST
+                # looks just like bold red, or:
+                #     echo -e "\033[1m\033[31m$(tput sgr0)" TEST
+                #     # Hrmm. tput-bold not bolding...
+                #     #   echo -e "$(tput bold)\033[31m$(tput sgr0)" TEST
+                # Fortunately, we can specify the RGB color instead of the
+                # 0-255 ANSI code, at least for terminals that support TrueColor™.
+                # This converts the #RRGGBB string value to an (r,g,b) int tuple.
+                # REF: For list of 0-255 ANSI color codes and their RBG values, see:
+                #   https://jonasjacek.github.io/colors/
+                self.RGB = _hex_to_rgb(color)
 
     def attribute(self):
         """Set or reset attributes"""
@@ -333,8 +375,12 @@ class colored(object):
             self.reverse_dict()
             color = self.reserve_paint[str(self.color)]
             return code + colored.PAINT[color] + colored.END
-        elif self.color.startswith("#"):
-            return code + str(self.HEX) + colored.END
+        elif self.HEX:
+             return code + str(self.HEX) + colored.END
+        elif self.RGB:
+            return "{}38;2;{};{};{}{}".format(
+                colored.ESC, self.RGB[0], self.RGB[1], self.RGB[2], colored.END
+            )
         else:
             return code + colored.PAINT[self.color] + colored.END
 
@@ -347,8 +393,12 @@ class colored(object):
             self.reverse_dict()
             color = self.reserve_paint[str(self.color)]
             return code + colored.PAINT[color] + colored.END
-        elif self.color.startswith("#"):
-            return code + str(self.HEX) + colored.END
+        elif self.HEX:
+             return code + str(self.HEX) + colored.END
+        elif self.RGB:
+            return "{}48;2;{};{};{}{}".format(
+                colored.ESC, self.RGB[0], self.RGB[1], self.RGB[2], colored.END
+            )
         else:
             return code + colored.PAINT[self.color] + colored.END
 
