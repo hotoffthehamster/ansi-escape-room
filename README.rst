@@ -3,10 +3,11 @@ Collection of color codes and names for 256 color terminal setups.
 The following is a list of 256 colors for Xterm, containing an example
 of the displayed color, Xterm Name, Xterm Number and HEX.
 
-.. image:: https://gitlab.com/dslackw/images/raw/master/colored/logo.png
-    :target: https://gitlab.com/dslackw/colored
+..         https://gitlab.com/dslackw/images/raw/master/colored/logo.png
+.. image:: docs/ansi-escape-room--logo.png
+    :target: https://github.com/landonb/ansi-escape-room.
 
-`[CHANGELOG] <https://gitlab.com/dslackw/colored/blob/master/CHANGELOG>`_
+.. `[CHANGELOG] <https://gitlab.com/dslackw/colored/blob/master/CHANGELOG>`_
 
 Video Demo
 ----------
