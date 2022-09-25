@@ -5,6 +5,11 @@
 try:
     from setuptools import setup
 except ImportError:
+    # Note that distutils to be removed in Python 3.12.
+    # - setuptools is not core Python. But it's assumed you have it
+    #   if you ran pip to install this project, or if you installed
+    #   a project that requires this project. So don't worry, it's
+    #   very unlikely that distutils (this branch) being accessed.
     from distutils.core import setup
 
 from ansi_escape_room import __version__
